@@ -1,0 +1,29 @@
+a = input()
+if(a=="vertebrado"):
+    a=input()
+    if(a=="ave"):
+        a=input()
+        if(a=="carnivoro"):
+            print("aguia")
+        elif(a=="onivoro"):
+            print("pomba")
+    elif(a=="mamifero"):
+        a=input()
+        if(a=="onivoro"):
+            print("homem")
+        elif(a=="herbivoro"):
+            print("vaca")
+elif(a=="invertebrado"):
+    a=input()
+    if(a=="inseto"):
+        a=input()
+        if(a=="hematofago"):
+            print("pulga")
+        elif(a=="herbivoro"):
+            print("lagarta")
+    elif(a=="anelideo"):
+        a=input()
+        if(a=="hematofago"):
+            print("sanguessuga")
+        elif(a=="onivoro"):
+            print("minhoca")
