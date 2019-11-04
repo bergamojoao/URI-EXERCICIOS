@@ -1,21 +1,18 @@
+from math import ceil
 n = int(input())
-
-while n>0:
-    word = input()
-    new=""
-    new2=""
-    new3=""
-    for i in range(0,len(word)):
-        k=ord(word[i])
-        if (ord(word[i])>=65 and ord(word[i])<=90) or (ord(word[i])>=97 and ord(word[i])<=122):
-            k+=3
-        new+=chr(k)
-    new2=new[::-1]
-    for i in range(0,int(len(word)/2)):
-        new3+=new2[i]
-    for i in range(int(len(word)/2),len(word)):
-        k=ord(new2[i])
-        k-=1
-        new3+=chr(k)
-    print(new3)
-    n-=1
+for i in range(n):
+    msg = str(input())
+    msg2 = ''
+    for x in msg:
+        if (x.isalpha() == True):
+            msg2 += chr(ord(x) + 3)
+        else:
+            msg2 += x
+    msg3 = msg2[::-1]
+    s = ceil(len(msg3)/2)
+    msg4 = msg3[-s:]
+    msg5 = ''
+    for y in msg4:
+        msg5 += chr(ord(y) - 1)
+    emsg = msg3.replace(msg4, msg5)
+    print(emsg)
