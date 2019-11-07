@@ -9,7 +9,7 @@ while n>0:
 aux = array.keys()
 chaves=[]
 for k in aux:
-    chaves.append(int(k))
+    chaves.append(int(k)) # transforma chaves em int para ordenar
 chaves.sort()
 for k in chaves:
     print("%d aparece %d vez(es)"%(k,array[str(k)]))
