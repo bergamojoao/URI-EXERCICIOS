@@ -1,0 +1,5 @@
+dist,d1,d2 = input().split(' ')
+dist=int(dist)
+d1=int(d1)
+d2=int(d2)
+print("%.2f"%(dist/(d1+d2)))
