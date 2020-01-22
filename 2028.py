@@ -1,24 +1,27 @@
-cases = 1
+def sequencia(num):
+    cont = 0
+    resultado = "0 "
+    while cont <= num:
+        for i in range(cont):
+            resultado += str(cont)+" "
+        cont += 1
+    return resultado
+    
+cont2 = 0
 while True:
     try:
+        cont2 += 1
+        if cont2 != 1:
+            print()
         n = int(input())
-        f = ['0']
-        for i in range(n+1):
-            for j in range(i):
-                f.append(i)
-        print('Caso %d: %d numero'%(cases, len(f)), end ='')
-        if(n != 0):
-            print('s', end='')
-        print()
-        for i in range(len(f)):
-            print(f[i], end = '')
-            if(i != len(f)-1):
-                print(' ', end = '')
-            else:
-                print()
-        print()
-        cases += 1
+        resposta = sequencia(n)
+        lista = resposta.split()
+        qtd_numeros = len(lista)
+        if qtd_numeros == 1:
+            print("Caso "+str(cont2)+": 1 numero")
+        else:
+            print("Caso "+str(cont2)+": "+str(qtd_numeros)+" numeros")
+        print(resposta[:-1])
         
-    except EOFError:
+    except:
         break
-# time limit
